@@ -38,6 +38,17 @@
             <groupId>jakarta.servlet</groupId>
             <artifactId>jakarta.servlet-api</artifactId>
             <version>6.1.0-M1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.1</version>
+<!--            <scope>runtime</scope>-->
+            <scope>compile</scope>
+<!--            <scope>provided</scope>-->
+<!--            <scope>system</scope> не стоит юзать-->
+<!--            <scope>test</scope>-->
         </dependency>
     </dependencies>
 
