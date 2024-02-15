@@ -8,10 +8,23 @@
     <artifactId>first-maven</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
+    <name>first-maven</name>
+
+    <contributors>
+        <contributor>
+            <name>Maks</name>
+            <roles>
+                <role>
+                    developer
+                </role>
+            </roles>
+        </contributor>
+    </contributors>
+
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
@@ -22,5 +35,12 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+
+    <build>
+        <plugins>
+
+        </plugins>
+    </build>
 
 </project>
