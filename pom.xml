@@ -44,11 +44,11 @@
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>42.7.1</version>
-<!--            <scope>runtime</scope>-->
-            <scope>compile</scope>
-<!--            <scope>provided</scope>-->
-<!--            <scope>system</scope> не стоит юзать-->
-<!--            <scope>test</scope>-->
+            <!--            <scope>compile</scope>--> <!-- дефолтный скоуп . нужен во время компиляции-->
+            <!--            <scope>provided</scope>--> <!-- значит что даную зависимость кто-то то предоставит например tomcat -->
+            <scope>runtime</scope> <!--во время компиляцию не нужен .а во время выполнение нужен.-->
+            <!--            <scope>system</scope> не стоит юзать-->
+            <!--            <scope>test</scope>-->
         </dependency>
     </dependencies>
 
