@@ -34,6 +34,7 @@
     <!--    env.-->
     <!--    System.getProperty  -D .-->
     <properties>
+        <app.en>dev</app.en>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>
@@ -196,6 +197,42 @@
         </pluginManagement>
 
     </build>
+
+    <profiles>
+        <profile>
+            <activation>
+<!--                <activeByDefault>true</activeByDefault>-->
+<!--                <os></os>-->
+<!--                <jdk>19</jdk>-->
+                <file>
+                    <exists>${basedir}/pom.xml</exists>
+<!--                    <missing></missing>-->
+                </file>
+                <property>
+                    <name>test.prop</name>
+                    <value>example</value>
+                </property>
+            </activation>
+            <id>prod</id>
+            <properties>
+                <app.en>prod</app.en>
+                <exmaple>test</exmaple>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <version>3.11.0</version>
+                        <configuration>
+                            <debug>false</debug>
+                            <optimize>true</optimize>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
     <!--    <distributionManagement>-->
     <!--        <snapshotRepository>-->
