@@ -28,6 +28,11 @@
         <module>web</module>
     </modules>
 
+    <!--    settings-->
+    <!--    project.groupId-->
+    <!--    ${spring.version}-->
+    <!--    env.-->
+    <!--    System.getProperty  -D .-->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>19</maven.compiler.source>
@@ -87,7 +92,13 @@
     </dependencyManagement>
 
     <build>
-<!--        <finalName>ROOT</finalName>-->
+        <resources>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <!--        <finalName>ROOT</finalName>-->
         <pluginManagement>
             <plugins>
                 <plugin>
