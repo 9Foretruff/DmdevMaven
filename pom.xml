@@ -45,7 +45,7 @@
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>42.7.1</version>
-<!--            <optional>true</optional> лучше не юзать!!!-->
+            <!--            <optional>true</optional> лучше не юзать!!!-->
             <!--            <scope>compile</scope>--> <!-- дефолтный скоуп . нужен во время компиляции-->
             <!--            <scope>provided</scope>--> <!-- значит что даную зависимость кто-то то предоставит например tomcat -->
             <scope>runtime</scope> <!--во время компиляцию не нужен .а во время выполнение нужен.-->
@@ -68,6 +68,13 @@
             <artifactId>spring-aop</artifactId>
             <version>6.0.11</version>
         </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>com.foretruff</groupId>-->
+<!--            <artifactId>first-maven</artifactId>-->
+<!--            <version>1.0.0-SNAPSHOT</version>-->
+<!--        </dependency>-->
+
     </dependencies>
 
     <build>
@@ -90,7 +97,7 @@
                     <includes>
                         <include></include>
                     </includes>
-<!--                    <skip>true</skip>-->
+                    <!--                    <skip>true</skip>-->
                 </configuration>
             </plugin>
             <plugin>
@@ -125,9 +132,14 @@
                             <goal>integration-test</goal>
                             <goal>verify</goal>
                         </goals>
-<!--                        <phase>test</phase>-->
+                        <!--                        <phase>test</phase>-->
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>3.1.1</version>
             </plugin>
         </plugins>
     </build>
