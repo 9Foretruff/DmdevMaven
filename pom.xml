@@ -30,7 +30,7 @@
         <connection>scm:git:git@github.com:9Foretruff/DmdevMaven.git</connection>
         <developerConnection>scm:git:git@github.com:9Foretruff/DmdevMaven.git</developerConnection>
         <url>https://github.com/9Foretruff/DmdevMaven</url>
-      <tag>first-maven-2.0.0</tag>
+      <tag>first-maven-2.0.1</tag>
   </scm>
 
     <!--    settings-->
