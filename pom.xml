@@ -24,6 +24,7 @@
         <module>database</module>
         <module>service</module>
         <module>web</module>
+        <module>hello-plugin</module>
     </modules>
 
     <scm>
